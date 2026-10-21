@@ -1,6 +1,6 @@
 {
   "name": "wrapguard",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Catch text that starts wrapping onto more lines, before it ships. Line-count snapshots for your pages at every breakpoint.",
   "keywords": [
     "responsive",
@@ -40,12 +40,14 @@
   },
   "packageManager": "pnpm@11.24.0",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "node init && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "test": "node --test test/*.test.ts",
     "prepare": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "playwright": "^1.56.1"
   },
   "devDependencies": {
